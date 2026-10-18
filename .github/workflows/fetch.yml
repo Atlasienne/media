@@ -1,0 +1,24 @@
+name: fetch
+on:
+  push:
+    paths: ["fetch/list.txt"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p fetch/img
+          while read -r name url; do
+            [ -z "$name" ] && continue
+            [ -f "fetch/img/$name" ] || curl -sSL -o "fetch/img/$name" "$url"
+          done < fetch/list.txt
+      - run: |
+          git config user.name "Atlasienne"
+          git config user.email "contact@atlasienne.com"
+          git add fetch/img
+          git diff --cached --quiet || git commit -m "fetch"
+          git push
