@@ -8,7 +8,7 @@ R = "/home/claude/media/reels_v4/"
 os.makedirs(R, exist_ok=True)
 
 REELS = {
- "01_tante-mariage": [
+ "06_tante-mariage": [
   dict(photo="plafond.jpg", phrase="Mariage de ta cousine. Ta tante arrive avec son sourire spécial.", fy=.45),
   dict(photo="plafond.jpg", phrase="« W nti, imta ? »", sous="Et toi, c'est pour quand ?", taille=118, fy=.45, duree=2.6),
   dict(photo="plafond.jpg", phrase="Réponse polie : « Inchallah, khalti. »", fy=.45),
@@ -23,7 +23,7 @@ REELS = {
   dict(photo="fenetre.jpg", phrase="Ta vie n'est pas en retard. Elle avance à ton rythme.", fy=.3,
        cta="Envoie-le à celle qui compte les années un peu trop fort."),
  ],
- "03_phrases-meres": [
+ "07_phrases-meres": [
   dict(photo="tajines.jpg", phrase="Les phrases que toutes les mères marocaines disent.", taille=92, fy=.6),
   dict(photo="tajines.jpg", phrase="« Chkoun lli gal lik ? »", sous="Qui t'a dit ça ? Même quand c'est elle qui l'a dit hier.", taille=112, fy=.6),
   dict(photo="tajines.jpg", phrase="« Ghir sber. »", sous="Patiente. Ça marche pour un rhume, un chagrin et une fin de mois.", taille=118, fy=.6),
@@ -31,7 +31,7 @@ REELS = {
   dict(photo="tajines.jpg", phrase="« Ma kayn lli bhalek. » Le lendemain : « Chouf\u00a0bent\u00a0khaltek. »", sous="Personne n'est comme toi. Regarde ta cousine.", fy=.6,
        cta="Laquelle tu entends le plus ? Dis-le en commentaire."),
  ],
- "04_plaisirs-50dh": [
+ "03_plaisirs-50dh": [
   dict(photo="the_atlas.jpg", phrase="5 petits plaisirs à moins de 50 DH.", taille=104, fy=.55),
   dict(photo="menthe.jpg", phrase="1. Un thé à la menthe en terrasse, seule, sans téléphone.", fy=.5),
   dict(photo="rideau.jpg", phrase="2. Le hammam du quartier, avec ton savon beldi.", fy=.5),
@@ -48,7 +48,7 @@ REELS = {
   dict(photo="tel.jpg", flou=10, phrase="Toi : un « ok » à 23\u00a0h. Et le groupe passe en sourdine.",
        cta="Tag la cousine qui a mis le groupe en silencieux."),
  ],
- "06_dire-non-famille": [
+ "01_dire-non-famille": [
   dict(photo="salon.jpg", phrase="Tu as le droit de dire non. Même à la famille.", taille=96, fy=.45),
   dict(photo="salon.jpg", phrase="Non à la troisième assiette qu'on te ressert.", fy=.45),
   dict(photo="salon.jpg", phrase="Non à la question sur ton salaire devant tout le monde.", fy=.45),

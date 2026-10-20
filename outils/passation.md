@@ -19,16 +19,17 @@ Pour reprendre dans une nouvelle conversation du projet R.Sociaux : lire cette f
 - entre_nous.py : format « Entre nous » (duo photo couleur / noir et blanc). reel.py : carrousel 1080x1350 vers Reel 1080x1920.
 - lot4.py (6 Reels) et lot4c.py (carrousel CNSS) : modèles à copier pour les lots suivants.
 
-## Lot 4 (produit le 20/10, relu par un relecteur indépendant, corrigé)
-Fichiers : reels_v4/*.mp4 (+ dossiers JPEG), reels_v4/legendes.json, posts/lot04/07_retraite-cnss-1320-jours/01-08.jpg, posts/lot04/legendes.json (texte + commentaire sources).
-Calendrier de publication, à la main, 13h et 21h :
-- 22/10 13h : 01_tante-mariage (Reel situation)
-- 22/10 21h : 03_phrases-meres (Reel rigolade darija)
-- 23/10 13h : 02_avant-30-ans (Reel motivation)
-- 23/10 21h : 07 carrousel CNSS 1 320 jours (info utile, mettre la légende puis les sources en premier commentaire)
-- 24/10 13h : 05_whatsapp-famille (Reel situation)
-- 24/10 21h : 04_plaisirs-50dh (Reel féminité)
-- 25/10 13h : 06_dire-non-famille (Reel confiance)
+## Lot 4 (produit le 20/10, relu par un relecteur indépendant, corrigé, réordonné du moins fort au plus fort)
+Fichiers : reels_v4/*.mp4 (+ dossiers JPEG), reels_v4/legendes.json, posts/lot04/04_retraite-cnss-1320-jours/01-08.jpg, posts/lot04/legendes.json (texte + commentaire sources). Le numéro de fichier = l'ordre de publication.
+Règle du propriétaire (20/10) : dans chaque lot, publier de la moins forte à la plus forte, la plus forte toujours en dernier.
+Calendrier, à la main :
+- 22/10 13h : 01_dire-non-famille (sujet déjà testé, 2 vues pour « dire non »)
+- 22/10 21h : 02_avant-30-ans (motivation générale, peu partagée)
+- 23/10 13h : 03_plaisirs-50dh (enregistrable, pas de tag)
+- 23/10 21h : 04 carrousel CNSS 1 320 jours (très utile, mais carrousels à 0-2 vues sur ce compte)
+- 24/10 13h : 05_whatsapp-famille (vécu par tout le monde, appel au tag)
+- 24/10 21h : 06_tante-mariage (situation culte, tag de la cousine)
+- 25/10 21h : 07_phrases-meres (la plus forte : darija, mère, commentaires assurés, proche du format modèle)
 Ajouter un son tendance dans l'appli. Garder les MP4 muets du dépôt comme versions sponsorisables.
 Point à confirmer : le délai spécial de 24 mois (60 ans atteints entre 01/2023 et 04/2025) court probablement jusqu'à fin avril 2027, une seule source le dit (Clicpaie, 20/03/2026). Le carrousel reste prudent et renvoie au 3939.
 

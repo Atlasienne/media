@@ -4,7 +4,7 @@ sys.path.insert(0, "/home/claude/atlasienne")
 from atl2 import *
 from PIL import Image
 from phrase import noorph
-OUT = "/home/claude/media/posts/lot04/07_retraite-cnss-1320-jours/"
+OUT = "/home/claude/media/posts/lot04/04_retraite-cnss-1320-jours/"
 os.makedirs(OUT, exist_ok=True)
 av = avatar("/tmp/_av4.png")
 F, L = "Argent", "Retraite"
