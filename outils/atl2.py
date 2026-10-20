@@ -3,7 +3,7 @@ import random
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-D = "/tmp/claude-0/-home-claude/3fbc5728-22e4-585b-80f4-0f604d7b46d8/scratchpad/"
+D = "/home/claude/atlasienne/"
 OUT = "/home/claude/atlasienne/out3/"
 F_SERIF = D + "fonts/Fraunces.ttf"
 F_SANS = D + "fonts/Readex.ttf"
