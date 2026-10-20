@@ -19,6 +19,22 @@ Décision du propriétaire, le 20/10 : le compte ressemble trop à une chaîne d
 5. Fierté : des Marocaines inspirantes en 15 secondes, le patrimoine porté au présent.
 6. Utile court : un droit ou un chiffre qui change la vie, une fois tous les 10 Reels.
 
+## Format modèle : « la phrase qu'on envoie à sa copine » (exemple montré le 20/10)
+Référence : un compte féminin, une seule photo d'ambiance et une phrase drôle et vraie. 3 617 partages pour 3 293 j'aime en 10 h. Il y a plus de partages que de j'aime, c'est exactement ce qu'on cherche.
+- Visuel : photo d'ambiance chaleureuse sans visage (plaid, thé à la menthe, caftan sur cintre, miroir, hammam, sac de courses). Phrase en serif blanc centrée, 1 à 3 écrans, avec une musique tendance ajoutée dans l'appli. Publier en Reel de 6 à 8 s ou en carrousel photo avec musique.
+- Ton : courtois et complice. Jamais de violence (pas de « gifler »), jamais de poids ni de régime, pas d'alcool.
+- Le premier écran pose le constat (« Être une Marocaine, c'est... »), le dernier donne la chute.
+- Idées :
+  - Être une Marocaine, c'est dire « j'arrive dans 5 minutes » en étant encore sous la douche.
+  - Ma mère : « Ma kayn li bhalek. » Aussi ma mère : « Chouf bent khaltek. »
+  - Je suis sortie acheter du pain. Je suis rentrée avec trois sacs et pas de pain.
+  - Mon salaire arrive le 1er et repart le 5. Une relation courte mais intense.
+  - « Je n'ai rien à me mettre », dit-elle devant une armoire pleine.
+  - Le hammam du dimanche, c'est ma thérapie. En plus, c'est moins cher.
+  - Personne ne demande rien. Ma tante, au mariage : « W nti, imta ? »
+  - Elle a dit « je passe 5 minutes ». Elle est restée jusqu'au dîner, et on a refait le monde.
+- Ce format compte comme « rigolade » dans la répartition. Viser 2 publications de ce type sur 4.
+
 ## Règles de fabrication
 - 7 à 15 secondes, 3 à 5 écrans, accroche lisible dès la première seconde.
 - Dernier écran : « Envoie-le à... », « Tag celle qui... » ou une question qui fait commenter.
