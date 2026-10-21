@@ -8,6 +8,12 @@ R = "/home/claude/media/reels_v4/"
 os.makedirs(R, exist_ok=True)
 
 REELS = {
+ "03_cinq-minutes": [
+  dict(photo="douche.jpg", phrase="Moi, à ma copine : « J'arrive dans 5 minutes. »", taille=96, fy=.4),
+  dict(photo="douche.jpg", phrase="Moi, en vrai : encore sous la douche.", taille=96, fy=.4),
+  dict(photo="douche.jpg", phrase="Elle répond « moi aussi ». Elle est encore en pyjama.", fy=.4,
+       cta="Envoie-le à celle qui t'attend toujours « 5 minutes »."),
+ ],
  "06_tante-mariage": [
   dict(photo="plafond.jpg", phrase="Mariage de ta cousine. Ta tante arrive avec son sourire spécial.", fy=.45),
   dict(photo="plafond.jpg", phrase="« W nti, imta ? »", sous="Et toi, c'est pour quand ?", taille=118, fy=.45, duree=2.6),
@@ -16,7 +22,7 @@ REELS = {
   dict(photo="plafond.jpg", phrase="En vrai : sourire, prendre une corne de gazelle et changer de table.", fy=.45,
        cta="Tag la cousine qui l'a entendu trois fois cette année."),
  ],
- "02_avant-30-ans": [
+ "01_avant-30-ans": [
   dict(photo="fenetre.jpg", phrase="Rappel : tu n'as pas à tout réussir avant 30 ans.", taille=96, fy=.3),
   dict(photo="fenetre.jpg", phrase="Ni le mariage, ni la maison, ni le poste parfait.", fy=.3),
   dict(photo="fenetre.jpg", phrase="Des femmes ont tout recommencé à 35, à 40, à 50 ans.", sous="Et elles vont très bien.", fy=.3),
@@ -31,7 +37,7 @@ REELS = {
   dict(photo="tajines.jpg", phrase="« Ma kayn lli bhalek. » Le lendemain : « Chouf\u00a0bent\u00a0khaltek. »", sous="Personne n'est comme toi. Regarde ta cousine.", fy=.6,
        cta="Laquelle tu entends le plus ? Dis-le en commentaire."),
  ],
- "03_plaisirs-50dh": [
+ "02_plaisirs-50dh": [
   dict(photo="the_atlas.jpg", phrase="5 petits plaisirs à moins de 50 DH.", taille=104, fy=.55),
   dict(photo="menthe.jpg", phrase="1. Un thé à la menthe en terrasse, seule, sans téléphone.", fy=.5),
   dict(photo="rideau.jpg", phrase="2. Le hammam du quartier, avec ton savon beldi.", fy=.5),
@@ -48,6 +54,10 @@ REELS = {
   dict(photo="tel.jpg", flou=10, phrase="Toi : un « ok » à 23\u00a0h. Et le groupe passe en sourdine.",
        cta="Tag la cousine qui a mis le groupe en silencieux."),
  ],
+}
+
+# En réserve pour un lot plus tard (thème proche du Reel « dire non » déjà en ligne)
+RESERVE = {
  "01_dire-non-famille": [
   dict(photo="salon.jpg", phrase="Tu as le droit de dire non. Même à la famille.", taille=96, fy=.45),
   dict(photo="salon.jpg", phrase="Non à la troisième assiette qu'on te ressert.", fy=.45),

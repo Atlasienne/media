@@ -21,11 +21,12 @@ Pour reprendre dans une nouvelle conversation du projet R.Sociaux : lire cette f
 
 ## Lot 4 (produit le 20/10, relu par un relecteur indépendant, corrigé, réordonné du moins fort au plus fort)
 Fichiers : reels_v4/*.mp4 (+ dossiers JPEG), reels_v4/legendes.json, posts/lot04/04_retraite-cnss-1320-jours/01-08.jpg, posts/lot04/legendes.json (texte + commentaire sources). Le numéro de fichier = l'ordre de publication.
+Le 21/10, « Dire non à la famille » est sorti du lot (trop proche du Reel « dire non » déjà en ligne) et rangé dans reels_reserve/, remplacé par 03_cinq-minutes.
 Règle du propriétaire (20/10) : dans chaque lot, publier de la moins forte à la plus forte, la plus forte toujours en dernier.
 Calendrier, à la main :
-- 22/10 13h : 01_dire-non-famille (sujet déjà testé, 2 vues pour « dire non »)
-- 22/10 21h : 02_avant-30-ans (motivation générale, peu partagée)
-- 23/10 13h : 03_plaisirs-50dh (enregistrable, pas de tag)
+- 22/10 13h : 01_avant-30-ans (motivation générale, peu partagée)
+- 22/10 21h : 02_plaisirs-50dh (enregistrable, pas de tag)
+- 23/10 13h : 03_cinq-minutes (format modèle « phrase à envoyer à sa copine », 3 écrans, 9 s, jamais testé)
 - 23/10 21h : 04 carrousel CNSS 1 320 jours (très utile, mais carrousels à 0-2 vues sur ce compte)
 - 24/10 13h : 05_whatsapp-famille (vécu par tout le monde, appel au tag)
 - 24/10 21h : 06_tante-mariage (situation culte, tag de la cousine)
