@@ -1,4 +1,4 @@
-# Atlasienne - passation (état au 20/10/2026, 22h45)
+# Atlasienne - passation (état au 23/10/2026, 01h)
 
 Pour reprendre dans une nouvelle conversation du projet R.Sociaux : lire cette fiche, puis claude/atlasienne/feuille-de-route.md (ligne éditoriale en vigueur depuis le 21/10 : copine marocaine, pas chaîne d'info), puis claude/atlasienne/bareme-formats.md.
 
@@ -33,6 +33,32 @@ Calendrier, à la main :
 - 25/10 21h : 07_phrases-meres (la plus forte : darija, mère, commentaires assurés, proche du format modèle)
 Ajouter un son tendance dans l'appli. Garder les MP4 muets du dépôt comme versions sponsorisables.
 Point à confirmer : le délai spécial de 24 mois (60 ans atteints entre 01/2023 et 04/2025) court probablement jusqu'à fin avril 2027, une seule source le dit (Clicpaie, 20/03/2026). Le carrousel reste prudent et renvoie au 3939.
+
+## Bilan du 22/10 (Metricool, données au 21/10 6h38)
+- 16 Reels en ligne, environ 800 vues au total, 0 abonné, 0 partage, 0 enregistrement, 0 j'aime.
+- Durée de visionnage moyenne 1 à 2,5 s. Chaque Reel plafonne vers 100 vues (échantillon de test d'Instagram).
+- Le propriétaire n'ajoute aucun son dans l'appli : les Reels partaient muets.
+- Dernières publications : 21/10 vers 6h35 (dire non à la famille, avant 30 ans avec une légende à nettoyer qui commence par « 23/10 à 13h, 02_avant-30-ans », j'arrive dans 5 minutes). Rien publié le 22/10.
+- Le reste du lot 4 (plaisirs, CNSS, WhatsApp, tante, mères) n'a jamais été publié. Il est remplacé par le lot 5.
+
+## Lot 5 (format v5, produit le 23/10 dans la nuit, relu par un relecteur indépendant, corrigé)
+- Moteur : outils/phrase2.py (reel_anime). Zoom lent, accroche entière visible dès l'image 0, mots qui apparaissent un par un sur les écrans suivants, coupe franche, coupure de lignes équilibrée (fonction coupe), flou local possible (zones_flou), signature remontée à y=1450.
+- Musique : outils/musique.py génère des ambiances originales (outils/musique/ambiance_a_m.wav, b, c), intégrées dans chaque MP4. Libres de droits, donc sponsorisables. Le propriétaire n'a rien à ajouter.
+- Fichiers : reels_v5/*.mp4 (+ dossiers JPEG des écrans), reels_v5/legendes.json, posts/lot05/03_retraite-cnss-1320-jours/ (8 images) et posts/lot05/legendes.json.
+- Calendrier, 2 par jour, à la main :
+  - 23/10 13h : 01_plaisirs-50dh
+  - 23/10 21h : 02_rien-a-me-mettre
+  - 24/10 13h : 03 carrousel CNSS (sources en premier commentaire)
+  - 24/10 21h : 04_hammam-therapie
+  - 25/10 13h : 05_pain
+  - 25/10 21h : 06_cafe-copine
+  - 26/10 13h : 07_salaire
+  - 26/10 21h : 08_phrases-meres
+  - 27/10 13h : 09_whatsapp-famille
+  - 27/10 21h : 10_tante-mariage (la plus forte, en dernier)
+- En réserve : reels_reserve/ (dire-non-famille ancien format, ma-mere format v5).
+- Rythme : 2 publications par jour. Passer à 3 seulement quand un Reel dépasse 500 vues.
+- Prochain bilan : 26/10 au soir sur Metricool (brandId 7495879, métriques IGRE02 03 23 11 21 12 10 07 24 28). Si la durée moyenne reste sous 3 s, changer encore de format avant de produire.
 
 ## Publié
 - 18-19/10 via Metricool : carrousels lot 1 et lot 2, Entre nous 01 et 02 (0 à 2 vues).

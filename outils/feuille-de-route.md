@@ -41,7 +41,7 @@ Référence : un compte féminin, une seule photo d'ambiance et une phrase drôl
 - Ton : tutoiement, chaleureux, un peu de darija, jamais de leçon de morale.
 - Humour sans moquerie d'un groupe et sans cliché lourd. On rit de situations, pas de personnes.
 - Photos Unsplash d'adultes qui ressemblent au Maroc, aucun visage généré, jamais de mineure sur un sujet mariage ou couple.
-- Le propriétaire ajoute un son tendance dans l'appli. Garder une version sans musique de chaque Reel gagnant, pour pouvoir le sponsoriser plus tard.
+- Une musique originale est intégrée dans chaque Reel (outils/musique.py) : rien à ajouter dans l'appli, et sponsorisable. Un son tendance ajouté dans l'appli reste un plus si le propriétaire a 20 secondes.
 - Typographie : pas de tiret cadratin ni demi-cadratin, pas de point-virgule, pas d'emoji, aucune mention d'IA, sources datées pour toute info.
 
 ## Prochain lot à produire en premier (lot 4)
@@ -60,3 +60,8 @@ Chaque idée passe d'abord au barème (bareme-formats.md), puis à une relecture
 - 22/10 : bilan des vues, partages et enregistrements à partir des captures du tableau de bord professionnel.
 - Publicité : pas avant 15 Reels de cette nouvelle ligne et un bilan. Seulement sur un Reel non politique déjà gagnant.
 - Plus tard : connecter Metricool via une page Facebook.
+
+## Mise à jour du 23/10 (après le bilan du 22/10)
+- Format v5 obligatoire pour les Reels : 6 à 10 s pour une phrase, 15 s maximum pour une liste, accroche entière lisible dès la première image, animation, musique intégrée.
+- 2 publications par jour, 13h et 21h. Jamais de publication en masse.
+- Dans chaque lot, du moins fort au plus fort, le plus fort en dernier, sur le créneau de 21h.

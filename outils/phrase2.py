@@ -8,11 +8,62 @@
 import sys, os, subprocess
 sys.path.insert(0, "/home/claude/atlasienne")
 from atl2 import serif, sans, wrap, logotype, PAPIER, ROSE, symbole
-from phrase import fond, noorph, RW, RH, SIDE, TOP_SAFE, BOT_SAFE
+from phrase import fond, RW, RH, SIDE, TOP_SAFE, BOT_SAFE
+from atl2 import fr
+
+
+def noorph(t):
+    return fr(t)
+
 from PIL import Image, ImageDraw, ImageFilter
 
 FPS = 30
 MUS = "/home/claude/atlasienne/musique/"
+
+
+PETITS = {"à", "de", "du", "des", "le", "la", "les", "un", "une", "et", "en", "au", "aux", "ma", "ta", "sa", "mon", "ton", "son",
+          "mes", "tes", "ses", "ce", "ces", "qui", "que", "qu'", "ne", "ni", "pour", "par", "sur", "dans", "avec", "sans", "il", "elle",
+          "je", "tu", "on", "y", "l'", "d'", "c'est", "une", "Et", "Ça,", "Ton", "Ta", "Il", "Elle", "Je", "Moi,", "Fin"}
+
+
+def coupe(d, texte, font, width):
+    """Coupure de lignes équilibrée : lignes de longueur proche, jamais de petit mot en fin de ligne,
+    pas de mot seul sur la dernière ligne. Programmation dynamique sur les mots."""
+    mots = [m for m in texte.split(" ") if m]
+    n = len(mots)
+    if n == 0:
+        return []
+    sp = d.textlength(" ", font=font)
+    L = [d.textlength(m, font=font) for m in mots]
+    INF = float("inf")
+    best = [INF] * (n + 1); prev = [0] * (n + 1); best[0] = 0
+    for j in range(1, n + 1):
+        w = -sp
+        for i in range(j - 1, -1, -1):
+            w += L[i] + sp
+            if w > width and i < j - 1:
+                break
+            tok = mots[j - 1]
+            last = tok.split("\u00a0")[-1].replace("\u2019", "'")
+            ouvert = sum(m.count("«") - m.count("»") for m in mots[:j]) > 0
+            pen = (width - w) ** 2 if j < n else max(0, width * 0.55 - w) ** 2
+            if j < n and (last in PETITS or last.lower() in PETITS or len(last.strip("«»,.")) <= 2):
+                pen += 4e6
+            if j < n and ouvert:
+                pen += 2e6
+            if j < n and mots[j] in ("»", "?", "!", ":"):
+                pen += 1e7
+            if j == n and j - i == 1 and n > 2:
+                pen += 3e6
+            if w > width:
+                pen += 1e8
+            c = best[i] + pen + 2e4
+            if c < best[j]:
+                best[j] = c; prev[j] = i
+    lignes, j = [], n
+    while j > 0:
+        i = prev[j]; lignes.append(" ".join(mots[i:j])); j = i
+    return lignes[::-1]
 
 
 def mise_en_page(phrase, sous, cta, taille):
@@ -21,17 +72,17 @@ def mise_en_page(phrase, sous, cta, taille):
     t = taille
     while True:
         fp = serif(t, 580)
-        lp = wrap(d, noorph(phrase), fp, width)
+        lp = coupe(d, noorph(phrase), fp, width)
         if len(lp) <= 6 or t <= 60:
             break
         t -= 4
     blocs = [(lp, fp, int(t * 1.15), PAPIER)]
     if sous:
         fs = sans(50, 440)
-        blocs.append((wrap(d, noorph(sous), fs, width), fs, 66, ROSE))
+        blocs.append((coupe(d, noorph(sous), fs, width), fs, 66, ROSE))
     if cta:
         fc = sans(48, 600)
-        blocs.append((wrap(d, noorph(cta), fc, width), fc, 64, ROSE))
+        blocs.append((coupe(d, noorph(cta), fc, width), fc, 64, ROSE))
     gap = 56
     total = sum(len(b[0]) * b[2] for b in blocs) + gap * (len(blocs) - 1)
     y = int(TOP_SAFE + (RH - TOP_SAFE - BOT_SAFE) / 2 - total / 2)
@@ -82,7 +133,7 @@ def marque_calque():
     sym = symbole(s)
     lw = d.textlength("atlasienne", font=serif(34, 620))
     x0 = int(RW / 2 - (s + 12 + lw) / 2)
-    yb = RH - BOT_SAFE + 70
+    yb = RH - 470
     lay.paste(sym, (x0, yb - s + 8), sym.convert("RGBA") if sym.mode != "RGBA" else sym)
     logotype(d, x0 + s + 12, yb, 34, PAPIER)
     return lay
@@ -104,6 +155,8 @@ def reel_anime(slug, out_dir, ecrans, musique="ambiance_a_m.wav", zoom=0.07):
     plans = []
     for i, e in enumerate(ecrans):
         big = fond(e["photo"], e.get("fx", .5), e.get("fy", .5), e.get("voile", .55), e.get("flou", 0))
+        for (x0, y0, x1, y1, r) in e.get("zones_flou", []):
+            big.paste(big.crop((x0, y0, x1, y1)).filter(ImageFilter.GaussianBlur(r)), (x0, y0))
         big = big.resize((int(RW * (1 + zoom)), int(RH * (1 + zoom))), Image.LANCZOS)
         lignes = mise_en_page(e["phrase"], e.get("sous"), e.get("cta"), e.get("taille", 92))
         plans.append(dict(big=big, lignes=lignes, n=nb_mots(lignes), dur=e.get("duree", duree_ecran(e, i == 0))))
