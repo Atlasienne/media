@@ -1,0 +1,77 @@
+import json, re
+H1 = "#Marocaines #Maroc"
+L = {
+"01_heures-sup": dict(
+ ig="Au Maroc, une heure supplémentaire faite en semaine entre 6 h et 21 h est payée 25 % de plus, et 50 % de plus entre 21 h et 6 h. La durée normale est de 44 h par semaine dans les activités non agricoles.\n\nTu le savais ? Envoie-le à ta collègue qui reste toujours tard.\n\n#DroitDuTravail #Salaire " + H1,
+ tt="En semaine, une heure sup entre 6 h et 21 h, c'est +25 %. Entre 21 h et 6 h, c'est +50 %. Tu le savais ?\n\n#DroitDuTravail #Salaire " + H1,
+ yt="Heure sup en journée : +25 %, la nuit : +50 %",
+ sources="Sources : Code du travail marocain (loi 65-99), articles 184 et 201. Humantal, « Heures supplémentaires au Maroc : calcul et taux », publié le 12/01/2026, humantal.ma/ressources/heures-supplementaires-maroc-calcul-taux. Upsilon Consulting, « Heures supplémentaires au Maroc : calcul et majoration 2026 », publié le 02/04/2026, revu le 03/11/2026, upsilon-consulting.com/heures-supplementaires-maroc."),
+"02_ttilifoun": dict(
+ ig="Mama w ttilifoun, qissa twila. Kat3iyet 3lik, katgoul t5ser, w nti ghir katch3elih.\n\nChkoun lli kaysle7 ttilifounat f darkoum ? Siftiha liha.\n\n#Darija #Mama " + H1,
+ tt="Mama katgoul ttilifoun t5ser, w nti ghir katch3elih. Chkoun lli kaysle7 ttilifounat f darkoum ?\n\n#Darija #Mama " + H1,
+ yt="Mama : « Had ttilifoun t5ser »"),
+"03_peur-quand-meme": dict(
+ ig="Le courage, ce n'est pas l'absence de peur. C'est avoir le cœur qui bat fort, et y aller quand même.\n\nTu as eu peur de quoi, la dernière fois que tu y es allée quand même ? Envoie-le à celle qui a un entretien cette semaine.\n\n#Confiance #ToiDabord " + H1,
+ tt="Le courage, ce n'est pas l'absence de peur. C'est y aller avec. Ta dernière peur affrontée, c'était quoi ?\n\n#Confiance #ToiDabord " + H1,
+ yt="Tu avais peur. Tu y es allée quand même"),
+"04_shampoing": dict(
+ ig="Au début du mois, tu prends soin de toi comme une reine. À la fin du mois, tu fais durer le flacon jusqu'à la dernière goutte.\n\nToi, c'est quoi ton produit que tu fais durer ? Envoie-le à celle qui fait pareil.\n\n#FinDeMois #Soin " + H1,
+ tt="Le 1er du mois, le soin à 300 DH. Le 25, de l'eau dans le flacon. Toi aussi ?\n\n#FinDeMois #Soin " + H1,
+ yt="Le 1er du mois contre le 25 du mois"),
+"05_cafe-seule": dict(
+ ig="S'asseoir seule au café, avec un livre et le téléphone posé à l'envers. Ce n'est pas triste, c'est un luxe qu'on oublie de s'offrir.\n\nTon café préféré pour être seule, c'est où ? Envoie-le à celle qui n'ose pas encore y aller.\n\n#ToiDabord #Confiance " + H1,
+ tt="Un café seule, ce n'est pas de la solitude. C'est un rendez-vous avec toi. Tu l'as déjà fait ?\n\n#ToiDabord #Confiance " + H1,
+ yt="Un café seule, c'est un rendez-vous avec toi"),
+"06_lpull": dict(
+ ig="Lpull dyalek ghber. Khtek ma 3arfa walou. W lghedda kayban f tsawer dyalha.\n\nChnou akhir haja khdatha lik khtek ? Siftiha liha.\n\n#Darija #Khti " + H1,
+ tt="Lpull dyalek ghber, w lghedda kayban f tsawer dyal khtek. Chnou akhir haja khdatha lik ?\n\n#Darija #Khti " + H1,
+ yt="« Fin howa lpull dyali ? » « Ma 3reftch. »"),
+"07_tghttiti": dict(
+ ig="Chez les mères marocaines, il n'y a qu'un seul diagnostic, et il marche pour tout. Mal à la tête, mal au ventre, petite fatigue : tu ne t'es pas assez couverte.\n\nC'est quoi la phrase de ta mère pour tout soigner ? Envoie-le-lui, elle va dire que c'est vrai.\n\n#MamaMarocaine #Darija " + H1,
+ tt="Mal à la tête, mal au ventre, mal au genou : pour ta mère, tu ne t'es pas assez couverte. La tienne dit quoi ?\n\n#MamaMarocaine #Darija " + H1,
+ yt="Ta mère : « Hit ma tghettitich »"),
+"08_ghadi-yjiw-dyaf": dict(
+ ig="Quand des invités arrivent, toute la maison passe au grand ménage, même les pièces que personne ne verra. Et la visite dure le temps d'un thé.\n\nChez toi, on lavait quoi d'inutile avant les invités ? Envoie-le à ta sœur, elle s'en souvient.\n\n#FamilleMarocaine #MamaMarocaine " + H1,
+ tt="Des invités arrivent : grand ménage, même la chambre où personne n'entre. Ils restent vingt minutes. Chez toi aussi ?\n\n#FamilleMarocaine #MamaMarocaine " + H1,
+ yt="Ta mère : « Ghadi yjiw dyaf »"),
+"09_vocal-de-ta-tante": dict(
+ ig="Le groupe WhatsApp de la famille a ses règles. La première : ta tante ne fait jamais un vocal de moins de trois minutes.\n\nLe plus long vocal reçu dans ton groupe famille, il durait combien ? Envoie-le à ta cousine du groupe.\n\n#GroupeFamille #FamilleMarocaine " + H1,
+ tt="Un vocal de 4 minutes de ta tante, tu le passes en ×2, elle parle encore plus vite. Ton record, c'est combien ?\n\n#GroupeFamille #FamilleMarocaine " + H1,
+ yt="Le vocal de 4 minutes de ta tante dans le groupe"),
+"10_couturiere": dict(
+ ig="Ce sera prêt jeudi. Jeudi, c'est « daba daba ». Et le caftan arrive la veille du mariage, parfait, comme si de rien n'était.\n\nTon record, c'était combien de jours de retard ? Envoie-le à la copine qui t'accompagne aux mariages.\n\n#Caftan #MariageMarocain " + H1,
+ tt="Prêt jeudi. Jeudi : « daba daba ». Et le caftan arrive la veille du mariage. Ça t'est déjà arrivé ?\n\n#Caftan #MariageMarocain " + H1,
+ yt="La couturière : « Ce sera prêt jeudi »"),
+"11_fakhoura-bik": dict(
+ ig="Il y a des copines qui t'envoient un vocal juste pour te dire qu'elles sont fières de toi. Sans raison, sans rien demander. Celles-là, on les garde.\n\nTu as une copine comme ça ? Envoie-le-lui maintenant.\n\n#Copines #Confiance " + H1,
+ tt="Garde la copine qui t'envoie un vocal juste pour dire « Ana fakhoura bik ». Tu en as une ?\n\n#Copines #Confiance " + H1,
+ yt="La copine qui te dit « Ana fakhoura bik »"),
+"12_tswira-wa7da": dict(
+ ig="Juste une photo, a dit ta tante. Une demi-heure plus tard, personne n'a souri au même moment, et c'est la pire qui part dans le groupe.\n\nChez toi, qui ferme les yeux sur toutes les photos ? Envoie-le-lui.\n\n#FamilleMarocaine #Photo " + H1,
+ tt="« Ghir tswira wa7da. » 47 photos plus tard, elle envoie celle où tu as les yeux fermés. Chez toi aussi ?\n\n#FamilleMarocaine #Photo " + H1,
+ yt="Ta tante : « Ghir tswira wa7da »"),
+"13_ghir-dqiqa": dict(
+ ig="Elle passe juste une minute. Elle enlève ses chaussures, on sert le thé, et la minute devient un après-midi. Le plus long, c'est l'au revoir sur le pas de la porte.\n\nLa visite « juste une minute » la plus longue chez toi, c'était combien ? Envoie-le à ta mère.\n\n#Voisine #FamilleMarocaine " + H1,
+ tt="« Ghir dqiqa. » Deux heures et trois verres de thé plus tard, elle est encore sur le pas de la porte. Chez toi aussi ?\n\n#Voisine #FamilleMarocaine " + H1,
+ yt="La voisine : « Ghir dqiqa »"),
+"14_ila-jit": dict(
+ ig="Tu cherches partout. Ta mère n'a même pas bougé de la cuisine, et elle sait déjà où c'est. Elle arrive, et c'est exactement là où tu avais regardé.\n\nTa mère trouve quoi en deux secondes chez toi ? Envoie-le à celle qui ne trouve jamais rien.\n\n#MamaMarocaine #Darija " + H1,
+ tt="« Ila jit w lqitou, 3ndek ! » Elle arrive et trouve la clé en deux secondes, là où tu avais regardé. Chez toi aussi ?\n\n#MamaMarocaine #Darija " + H1,
+ yt="« Ila jit w lqitou, 3ndek ! »"),
+}
+def fr(t):
+    t = t.replace("'", "’")
+    t = re.sub(r"(\d) (h|ans|mois|heure|minutes|DH|%)\b", "\\1\u00a0\\2", t)
+    t = re.sub(r"(\d) %", "\\1\u00a0%", t)
+    t = re.sub(r" ([?!:])", "\u00a0\\1", t)
+    t = t.replace("« ", "«\u00a0").replace(" »", "\u00a0»")
+    return t
+out = {}
+for k, v in L.items():
+    o = {kk: fr(vv) for kk, vv in v.items()}
+    assert len(o["yt"]) <= 60, (k, len(o["yt"]))
+    for vv in v.values():
+        assert not re.search("[;—–]", vv), k
+    out[k] = o
+json.dump(out, open("/home/claude/media/reels_v7/legendes.json", "w"), ensure_ascii=False, indent=1)
+print("ok", len(out))
