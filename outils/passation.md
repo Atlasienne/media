@@ -1,6 +1,13 @@
-# Atlasienne - passation (état au 06/11/2026, 06h05 UTC, tâche hebdomadaire)
+# Atlasienne - passation (état au 10/11/2026, 14h UTC, suivi biquotidien ; lot 7 du 06/11 ci-dessous)
 
 Pour reprendre : lire cette fiche, puis claude/positionnement.md (fait foi), claude/atlasienne/feuille-de-route.md, claude/atlasienne/bareme-formats.md. Skill production-atlasienne disponible.
+
+## Suivi du 10/11 (13h50 UTC, tâche de suivi biquotidienne)
+- Gagnant : 05_cafe-seule (09/11 21h) 131 vues, 113 comptes touchés, 50 % de rétention à 3 s, 1 partage (le premier depuis le passage aux cta « Envoie-le à »), 5 j'aime. Pilier confiance et toi d'abord. Le format scène + « Ce n'est pas X, c'est Y » + cta à une personne précise fonctionne.
+- Déclinaison produite et programmée : reels_v7d/01_mer-seule (marcher seule au bord de la mer un dimanche matin), 10/11 17h UTC, Instagram, PENDING vérifié. Commit 85c2e4681c043ea67c1b84bad1df51a5fc421074, script outils/decl_mer.py, photo Unsplash kRFty-4SEG0 (eq/l7/mer1.jpg, version éclaircie mer1w.jpg). Relecture indépendante faite : subjonctif « que tu n'aies personne », présent « tu as envie », coupure du cta, photo éclaircie et réchauffée.
+- Autres Reels des 3 derniers jours : heures sup 110 vues 37,3 % 0 partage, shampoing fin de mois 43 vues 9,5 %. Trois Reels à 0 vue et 0 compte touché dans Metricool : tante du mariage (07/11 13h), ttilifoun (08/11 13h), peur quand même (08/11 21h), pourtant publiés (URL Instagram présentes). À revérifier au prochain suivi : retard de statistiques ou Reels non distribués.
+- Abonnés : IGEV01 toujours à 1, IGEV43 vide.
+- Pour le lot 8 : donner plus de place au pilier confiance sur le modèle café seule et mer seule. Le 10/11 compte 3 publications (13h, 17h, 21h).
 
 ## Lot 7 (produit et programmé le 06/11 par la tâche hebdomadaire)
 - Bilan Metricool des 12 Reels du lot 6 publiés du 31/10 au 05/11 : 806 vues, 710 comptes touchés, 0 partage, 5 j'aime, 0 enregistrement, 1 abonné au total (IGEV01 passe à 1 le 02/11). Rétention à 3 s moyenne 32,8 % (contre 13,9 % la semaine d'avant).
@@ -21,7 +28,7 @@ Pour reprendre : lire cette fiche, puis claude/positionnement.md (fait foi), cla
   - 13/11 13h 12_tswira-wa7da, 21h 13_ghir-dqiqa
   - 14/11 13h : libre (premier créneau du lot 8)
   - 14/11 21h 14_ila-jit (le plus fort, en dernier)
-- Prochain lot : commence au 14/11 13h. Mesurer les partages (IGRE21) après le passage aux cta « Envoie-le à ». Si la darija pure reste sous la darija mixte, passer le test à 1 Reel par lot.
+- Prochain lot : commence au 14/11 13h. (Le 10/11 a reçu une 3e publication à 17h, la déclinaison mer seule.) Mesurer les partages (IGRE21) après le passage aux cta « Envoie-le à ». Si la darija pure reste sous la darija mixte, passer le test à 1 Reel par lot.
 - Idées en réserve : taxi sans moquerie (à retravailler), toi et ta sœur version maquillage emprunté, le hammam version phrase entendue (« Ghir chwiya dyal lma skhoun »), la file d'attente à l'administration (sans politique), le « Fin kenti ? » de la mère au retour tardif.
 - Problèmes : TikTok et YouTube non connectés dans Metricool pour Atlasienne. Métriques d'abonnés gagnés et perdus (IGEV43, IGEV44) toujours vides, seul IGEV01 (total) répond. Le moteur de coupure de lignes ignore parfois les espaces insécables (« « Ghadi » seul en fin de ligne sur 10 couturière, mineur).
 
