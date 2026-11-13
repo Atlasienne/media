@@ -46,7 +46,7 @@ L = {
  ig="Cinq minutes de retard et ta mère a déjà appelé ta sœur, ta cousine et ta copine. Et le lendemain, elle te rappelle qu'elle n'a pas dormi avant ton retour.\n\nTa mère appelle qui en premier quand tu es en retard ? Envoie-le-lui, elle va dire que c'est normal.\n\n#MamaMarocaine #Darija " + H1,
  tt="Cinq minutes de retard. Ta mère a déjà appelé ta sœur, ta cousine et ta copine. Elle appelle qui en premier, la tienne ?\n\n#MamaMarocaine #Darija " + H1,
  yt="Ta mère : « Fin kenti ? »"),
-"12_bl3in": dict(
+"12_bl3ine": dict(
  ig="Tu demandes la recette à ta mère, et chaque quantité, c'est « bl3in ». Tu fais pareil, et ton tajine n'a jamais le même goût que le sien.\n\nC'est quoi le plat de ta mère que tu n'arrives pas à refaire ? Envoie-le-lui, elle va dire que c'est facile.\n\n#MamaMarocaine #CuisineMarocaine " + H1,
  tt="Chaque quantité de la recette de ta mère, c'est « bl3in ». Et ton plat n'a jamais le même goût. Le plat que tu n'arrives pas à refaire, c'est lequel ?\n\n#MamaMarocaine #CuisineMarocaine " + H1,
  yt="La recette de ta mère : « Bl3in »"),
