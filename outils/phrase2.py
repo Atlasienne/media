@@ -49,6 +49,8 @@ def coupe(d, texte, font, width):
             pen = (width - w) ** 2 if j < n else max(0, width * 0.55 - w) ** 2
             if j < n and (last in PETITS or last.lower() in PETITS or len(last.strip("«»,.")) <= 2):
                 pen += 4e6
+            if j < n and tok.startswith("«") and not tok.endswith("»"):
+                pen += 5e6
             if j < n and ouvert:
                 pen += 2e6
             if j < n and mots[j] in ("»", "?", "!", ":"):
